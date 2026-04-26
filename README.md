@@ -29,13 +29,26 @@ https://github.com/user-attachments/assets/58fee21c-4d25-4c56-8341-940c4251a930
 ## Local Setup Instructions
 
 ### Prerequisites
-* .NET SDK (version 9.0 or newer)
-* Node.js and npm (or alternative)
+Depending on your preferred setup method, you will need:
+* **Option A:** Docker
+* **Option B:** .NET 9.0 SDK **And** Node.js (v20+) with npm
 
 ### Clone repo
   ```bash
   git clone https://github.com/thejerremi/YearsInPixels
   ```
+
+### **Option A:** Docker Setup
+If you have Docker installed, you can launch the entire environment with one command.
+1. From the root project directory, run:
+	```bash
+   docker-compose up --build
+   ```
+   
+2. Site will be accessible on:
+	* http://localhost:3000
+   
+### **Option B:** Local Development
 
 ### Backend
 1. Navigate to the WebAPI project folder:
@@ -68,6 +81,9 @@ https://github.com/user-attachments/assets/58fee21c-4d25-4c56-8341-940c4251a930
    ```bash
    npm run dev
    ```
+   
+Site will be accessible on:
+  * http://localhost:3000
 
 ## AI-Assisted Development
 
