@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using YearsInPixels.Application.Configurations;
 using YearsInPixels.Application.Interfaces;
 using YearsInPixels.Application.Services;
 using YearsInPixels.Application.Validators;
@@ -19,6 +20,8 @@ namespace YearsInPixels.Infrastructure
         {
             services.AddDbContext<AppDbContext>(op => op.UseSqlite(configuration.GetConnectionString("Default")
                 ?? throw new ArgumentNullException("No connection string provided"), b => b.MigrationsAssembly("YearsInPixels.Infrastructure")));
+
+            services.Configure<JwtSettings>(configuration.GetSection(JwtSettings.SectionName));
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
@@ -49,6 +52,7 @@ namespace YearsInPixels.Infrastructure
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IPixelService, PixelService>();
             services.AddScoped<ICurrentUserService, CurrentUserService>();
+            services.AddScoped<ITokenService, TokenService>();
 
             return services;
         }

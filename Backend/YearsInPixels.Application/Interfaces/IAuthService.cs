@@ -6,6 +6,5 @@ namespace YearsInPixels.Application.Interfaces
     {
         Task<TokenResponseDto?> RegisterAsync(UserDto request);
         Task<TokenResponseDto?> LoginAsync(UserDto request);
-        Task<TokenResponseDto?> RefreshTokensAsync(RefreshTokenRequestDto request);
     }
 }

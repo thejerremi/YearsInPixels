@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { getApiErrorMessages, isUnauthorizedError } from '~/services/apiClient'
+import { getApiErrorMessages, isUnauthorizedError } from '~/api/apiClient'
 import { pixelService } from '~/services/pixelService'
 import type { DailyPixelDto, PixelDay, RandomPixelDto, SaveDailyPixelInput } from '~/types/mood'
 import { translateApiMessages } from '~/utils/apiErrorTranslations'

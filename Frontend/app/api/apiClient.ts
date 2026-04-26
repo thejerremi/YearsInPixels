@@ -1,4 +1,4 @@
-import axios, { type AxiosError, type AxiosInstance } from 'axios'
+import axios, { type AxiosError, type AxiosInstance, type InternalAxiosRequestConfig } from 'axios'
 
 type ErrorResponse = {
   statusCode?: number
@@ -6,15 +6,25 @@ type ErrorResponse = {
   errors?: string[]
 }
 
-export const createApiClient = (accessToken?: string | null): AxiosInstance => {
+type AccessTokenProvider = () => string | null | undefined
+
+export const createApiClient = (getAccessToken?: AccessTokenProvider): AxiosInstance => {
   const config = useRuntimeConfig()
 
   const client = axios.create({
     baseURL: config.public.apiBaseUrl
   })
 
-  if (accessToken) {
-    client.defaults.headers.common.Authorization = `Bearer ${accessToken}`
+  if (getAccessToken) {
+    client.interceptors.request.use((requestConfig: InternalAxiosRequestConfig) => {
+      const token = getAccessToken()
+
+      if (token) {
+        requestConfig.headers.Authorization = `Bearer ${token}`
+      }
+
+      return requestConfig
+    })
   }
 
   return client

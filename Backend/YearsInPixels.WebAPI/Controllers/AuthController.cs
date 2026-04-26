@@ -7,7 +7,7 @@ namespace YearsInPixels.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthController(IAuthService authService) : ControllerBase
+    public class AuthController(IAuthService authService, ITokenService tokenService) : ControllerBase
     {
         [Authorize]
         [HttpGet]
@@ -39,7 +39,7 @@ namespace YearsInPixels.WebAPI.Controllers
         [HttpPost("refresh-token")]
         public async Task<ActionResult<TokenResponseDto>> RefreshToken(RefreshTokenRequestDto request)
         {
-            var result = await authService.RefreshTokensAsync(request);
+            var result = await tokenService.RefreshTokensAsync(request);
             if (result is null || result.AccessToken is null || result.RefreshToken is null)
                 return Unauthorized("Invalid refresh token.");
 

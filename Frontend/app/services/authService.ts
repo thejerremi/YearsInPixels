@@ -1,4 +1,4 @@
-import { createApiClient } from '~/services/apiClient'
+import { createApiClient } from '~/api/apiClient'
 import type { RefreshTokenRequestDto, TokenResponseDto, UserDto } from '~/types/auth'
 
 type AuthPingResponseDto = {
@@ -26,7 +26,7 @@ export const authService = {
   },
 
   async checkAuthenticated(accessToken: string) {
-    const response = await createApiClient(accessToken).get<AuthPingResponseDto>('/api/auth')
+    const response = await createApiClient(() => accessToken).get<AuthPingResponseDto>('/api/auth')
 
     return response.data
   }

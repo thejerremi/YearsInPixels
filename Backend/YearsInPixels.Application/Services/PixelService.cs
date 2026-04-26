@@ -36,7 +36,7 @@ namespace YearsInPixels.Application.Services
 
             var existingPixel = await _pixelRepository.GetPixelByDateAsync(userId, dto.Date);
 
-            if (existingPixel != null)
+            if (existingPixel is not null)
             {
                 existingPixel.MoodValue = dto.MoodValue;
                 existingPixel.DayWord = dto.DayWord;
@@ -63,7 +63,7 @@ namespace YearsInPixels.Application.Services
             var userId = _currentUser.UserId ?? throw new UnauthorizedAccessException();
             var pixel = await _pixelRepository.GetRandomPixelAsync(userId, id);
 
-            if (pixel == null) return null;
+            if (pixel is null) return null;
 
             return new RandomPixelDto(pixel.Id, pixel.Date, pixel.MoodValue, pixel.DayWord, pixel.JournalNote);
         }

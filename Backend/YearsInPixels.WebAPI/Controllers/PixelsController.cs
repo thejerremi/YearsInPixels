@@ -25,7 +25,7 @@ namespace YearsInPixels.WebAPI.Controllers
         public async Task<ActionResult<RandomPixelDto>> GetRandom(int? id = null)
         {
             var result = await pixelService.GetRandomFlashbackAsync(id);
-            return result != null ? Ok(result) : NotFound("No memories found yet.");
+            return result is not null ? Ok(result) : NotFound("No memories found yet.");
         }
     }
 }

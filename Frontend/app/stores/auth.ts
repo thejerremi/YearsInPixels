@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { authService } from '~/services/authService'
-import { getApiErrorMessages, isUnauthorizedError } from '~/services/apiClient'
+import { getApiErrorMessages, isUnauthorizedError } from '~/api/apiClient'
 import { useToastStore } from '~/stores/toast'
 import type { AuthUser, TokenResponseDto, UserDto } from '~/types/auth'
 import { translateApiMessages } from '~/utils/apiErrorTranslations'
