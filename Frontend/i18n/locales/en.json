@@ -1,0 +1,191 @@
+{
+  "app": {
+    "name": "Years in pixels",
+    "language": "Language"
+  },
+  "common": {
+    "cancel": "Cancel",
+    "save": "Save",
+    "logout": "Log out",
+    "loading": "Loading..."
+  },
+  "auth": {
+    "login": {
+      "title": "Years in pixels",
+      "subtitle": "Log in to save today's mood.",
+      "eyebrow": "Your year in colors",
+      "featureOne": "Whole year of tiny memories",
+      "featureTwo": "Mood saved on a 0-100 scale",
+      "featureThree": "A private journal after login",
+      "submit": "Log in",
+      "noAccount": "Don't have an account?",
+      "registerLink": "Create account",
+      "submitAria": "Log in to Years in pixels",
+      "registerAria": "Go to registration"
+    },
+    "register": {
+      "title": "Create account",
+      "subtitle": "An account is required to keep your own year in pixels.",
+      "eyebrow": "Start today",
+      "featureOne": "One short note per day",
+      "featureTwo": "A colorful view of the whole year",
+      "featureThree": "Random returns to saved memories",
+      "submit": "Create account",
+      "hasAccount": "Already have an account?",
+      "loginLink": "Log in",
+      "submitAria": "Create a Years in pixels account",
+      "loginAria": "Go to login"
+    },
+    "fields": {
+      "username": "Username",
+      "password": "Password",
+      "confirmPassword": "Confirm password"
+    },
+    "validation": {
+      "usernameRequired": "Enter your username.",
+      "usernameMin": "Username should be at least 3 characters long.",
+      "usernameMax": "Username cannot be longer than 20 characters.",
+      "passwordRequired": "Enter your password.",
+      "passwordMin": "Password should be at least 6 characters long.",
+      "passwordMatch": "Passwords must match."
+    },
+    "errors": {
+      "loginFailed": "Could not log in.",
+      "registerFailed": "Could not create the account.",
+      "sessionExpired": "Your session has expired. Log in again."
+    }
+  },
+  "home": {
+    "eyebrow": "Mood dashboard",
+    "yearSubtitle": "Each square is one day of the year. Click today or any earlier day to add or edit an entry.",
+    "previousYear": "Show previous year",
+    "previousYearShort": "Previous",
+    "nextYear": "Show next year",
+    "nextYearShort": "Next",
+    "gridLabel": "Year days grid",
+    "legendLow": "Harder day",
+    "legendHigh": "Great day",
+    "legendEmpty": "No entry",
+    "noEntry": "no entry",
+    "moodOutOf": "{value} out of 100",
+    "stats": {
+      "yearSummary": "Year summary",
+      "completed": "Saved days",
+      "completion": "{value}% of completed days",
+      "average": "Average mood - {year}",
+      "yearProgress": "Year progress",
+      "yearProgressDetail": "Day {day} of {total}",
+      "filled": "filled",
+      "noData": "No data"
+    },
+    "canvas": {
+      "title": "Year map",
+      "subtitle": "Your year as a living gradient of memories, moods, and short notes.",
+      "hint": "Click a pixel"
+    },
+    "tooltip": {
+      "emptySummary": "No entry. Click to add one."
+    },
+    "week": {
+      "previous": "Show previous week",
+      "next": "Show next week"
+    },
+    "today": {
+      "title": "Today's pixel",
+      "subtitle": "Mood scale from 0 to 100.",
+      "empty": "Click the pulsing pixel in the grid to add today's entry.",
+      "openAria": "Open today's pixel editor"
+    },
+    "flashback": {
+      "title": "Random flashback",
+      "subtitle": "A time capsule with the mood, short note, and memory from that day.",
+      "empty": "A flashback will appear after you save your first days.",
+      "rerollAria": "Draw another flashback"
+    },
+    "dialog": {
+      "title": "Save selected day",
+      "subtitle": "Choose your mood and describe the day.",
+      "selectedDate": "Selected date: {date}",
+      "moodLabel": "Mood",
+      "dayWord": "Short mood description",
+      "dayWordPlaceholder": "How do you feel?",
+      "moodSuggestionsLabel": "Suggestions for this mood",
+      "moodSuggestions": {
+        "heaviness": "heavy",
+        "tiredness": "tired",
+        "overwhelm": "overwhelmed",
+        "sadness": "sad",
+        "tension": "tense",
+        "emptiness": "empty",
+        "helplessness": "helpless",
+        "melancholy": "melancholy",
+        "anxiety": "anxious",
+        "weariness": "weary",
+        "chaos": "chaotic",
+        "scattered": "scattered",
+        "irritation": "irritated",
+        "sleepiness": "sleepy",
+        "reflection": "reflective",
+        "lowEnergy": "low energy",
+        "neutral": "neutral",
+        "calm": "calm",
+        "steady": "steady",
+        "routine": "routine",
+        "balance": "balanced",
+        "quiet": "quiet",
+        "focus": "focused",
+        "ordinary": "ordinary",
+        "lightness": "light",
+        "energy": "energized",
+        "gratitude": "grateful",
+        "motivation": "motivated",
+        "smile": "smiling",
+        "hope": "hopeful",
+        "satisfaction": "satisfied",
+        "goodRhythm": "good rhythm",
+        "joy": "joyful",
+        "euphoria": "euphoric",
+        "flow": "flow",
+        "fulfillment": "fulfilled",
+        "delight": "delighted",
+        "pride": "proud",
+        "enthusiasm": "enthusiastic",
+        "greatDay": "great day"
+      },
+      "journal": "Day note",
+      "charactersLeft": "Characters left: {count}",
+      "cancelAria": "Cancel saving the pixel",
+      "saveAria": "Save selected pixel"
+    },
+    "validation": {
+      "dayWordRequired": "Briefly describe your mood.",
+      "dayWordMax": "Maximum 30 characters.",
+      "journalMax": "Maximum 2000 characters."
+    },
+    "errors": {
+      "fetchYear": "Could not fetch year pixels.",
+      "saveToday": "Could not save the pixel."
+    }
+  },
+  "apiErrors": {
+    "usernameRequired": "Username is required.",
+    "usernameMin": "Username must be at least 3 characters long.",
+    "usernameMax": "Username cannot exceed 20 characters.",
+    "passwordRequired": "Password is required.",
+    "passwordMin": "Password must be at least 6 characters long.",
+    "dateRequired": "Date is required.",
+    "moodRange": "Mood value must be between 0 and 100.",
+    "dayWordMax": "The day word is too long, max {max} characters.",
+    "journalMax": "Your note exceeds the maximum length of {max} characters.",
+    "futureDate": "You cannot record a pixel for a future date.",
+    "validationFailed": "Validation failed.",
+    "internalServer": "Internal Server Error. Please try again later.",
+    "usernameExists": "Username already exists.",
+    "invalidCredentials": "Invalid username or password.",
+    "invalidRefreshToken": "Invalid refresh token.",
+    "authenticated": "You are authenticated.",
+    "noMemories": "No memories found yet.",
+    "pixelSaved": "Pixel has been saved.",
+    "network": "Could not connect to the server."
+  }
+}

@@ -1,0 +1,130 @@
+.dashboard-card {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow: 0 26px 70px rgba(31, 41, 55, 0.12);
+  backdrop-filter: blur(24px);
+  animation: card-enter 520ms ease-out both;
+}
+
+.year-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: clamp(16px, 2vw, 22px);
+  border-radius: var(--card-radius);
+}
+
+.year-toolbar__eyebrow {
+  background: rgba(118, 87, 245, 0.1) !important;
+  color: #4631a8 !important;
+}
+
+.year-toolbar__title-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.year-toolbar__title {
+  margin: 0;
+  color: #172033;
+  font-size: clamp(2.2rem, 4vw, 3.25rem);
+  font-weight: 900;
+  letter-spacing: -0.07em;
+  line-height: 0.9;
+}
+
+.year-toolbar__copy {
+  padding-top: 12px;
+  margin: 0;
+  color: rgba(23, 32, 51, 0.64);
+  font-size: 0.95rem;
+}
+
+.year-toolbar__meta {
+  display: grid;
+  gap: 12px;
+  justify-items: end;
+}
+
+.year-toolbar__brand,
+.year-toolbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.year-toolbar__app-name,
+.year-toolbar__user {
+  margin: 0;
+  text-align: right;
+}
+
+.year-toolbar__app-name {
+  color: #172033;
+  font-weight: 850;
+}
+
+.year-toolbar__user {
+  color: rgba(23, 32, 51, 0.58);
+  font-size: 0.88rem;
+}
+
+.year-control {
+  min-height: 42px;
+  border-radius: 16px;
+}
+
+.year-control--previous {
+  background: rgba(255, 255, 255, 0.92) !important;
+  color: #4631a8 !important;
+  box-shadow: 0 12px 28px rgba(31, 41, 55, 0.14);
+}
+
+.year-control--logout {
+  background: rgba(118, 87, 245, 0.1) !important;
+  color: #4631a8 !important;
+}
+
+.year-canvas__heading {
+  min-width: 0;
+}
+
+@keyframes card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 599px) {
+  .year-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .year-toolbar__meta {
+    justify-items: stretch;
+  }
+
+  .year-toolbar__brand,
+  .year-toolbar__actions {
+    justify-content: space-between;
+  }
+
+  .year-toolbar__app-name,
+  .year-toolbar__user {
+    text-align: left;
+  }
+
+  .year-toolbar__copy {
+    max-width: none;
+  }
+}

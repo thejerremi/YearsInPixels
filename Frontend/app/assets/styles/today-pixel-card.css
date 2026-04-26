@@ -1,0 +1,160 @@
+.dashboard-card {
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.78);
+  animation: card-enter 520ms ease-out both;
+  backdrop-filter: blur(24px);
+  box-shadow: 0 26px 70px rgba(31, 41, 55, 0.12);
+}
+
+.today-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--card-radius);
+}
+
+.today-card--interactive {
+  cursor: pointer;
+  transition:
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.today-card--interactive:hover,
+.today-card--interactive:focus-visible {
+  box-shadow: 0 30px 80px rgba(124, 58, 237, 0.18);
+  transform: translateY(-2px);
+}
+
+.today-card__halo {
+  position: absolute;
+  inset: -35% -35% auto auto;
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  background: rgba(124, 58, 237, 0.12);
+  filter: blur(8px);
+}
+
+.today-mood-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.today-score {
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  min-width: 118px;
+  overflow: hidden;
+  padding: 14px 18px;
+  border-radius: 26px;
+  background:
+    linear-gradient(135deg, var(--today-color), rgba(255, 255, 255, 0.68)),
+    var(--today-color);
+  box-shadow: 0 18px 38px color-mix(in srgb, var(--today-color) 24%, transparent);
+}
+
+.today-score::after {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(6, 10, 24, 0.1) 100%),
+    radial-gradient(circle at 20% 80%, rgba(0, 0, 0, 0.12), transparent 8rem);
+  content: "";
+}
+
+.today-score span {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: clamp(2rem, 4vw, 2.35rem);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.38);
+}
+
+.today-score small {
+  position: relative;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.32);
+}
+
+.today-word-chip {
+  max-width: 100%;
+  min-height: 36px;
+  background: rgba(124, 58, 237, 0.1) !important;
+  color: #5b21b6 !important;
+  font-weight: 750;
+}
+
+.today-word-chip :deep(.v-chip__content) {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.today-note {
+  display: -webkit-box;
+  max-height: 4.6em;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+.empty-state {
+  display: grid;
+  gap: 10px;
+  place-items: center;
+  min-height: 150px;
+  border: 1px dashed rgba(124, 58, 237, 0.22);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.46);
+  padding: 22px;
+  text-align: center;
+}
+
+.empty-state p {
+  margin: 0;
+  color: rgba(23, 32, 51, 0.62);
+}
+
+@keyframes card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 1280px) {
+  .today-card :deep(.v-card-item) {
+    padding-bottom: 6px;
+  }
+
+  .today-card :deep(.v-card-text) {
+    padding-top: 4px;
+  }
+
+  .empty-state {
+    min-height: 112px;
+    padding: 16px;
+  }
+
+  .today-note {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+}

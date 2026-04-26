@@ -1,0 +1,83 @@
+.dashboard-card {
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.78);
+  animation: card-enter 520ms ease-out both;
+  backdrop-filter: blur(24px);
+  box-shadow: 0 26px 70px rgba(31, 41, 55, 0.12);
+}
+
+.year-summary-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 104px;
+  padding: 16px 18px;
+  border-radius: 28px;
+}
+
+.year-summary-card__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.year-summary-card__metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.year-summary-card__metric-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.year-summary-card__metric-heading span {
+  color: rgba(23, 32, 51, 0.72);
+  font-weight: 750;
+}
+
+.year-summary-card__metric-heading strong {
+  color: #172033;
+  font-size: 1.45rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.year-summary-card .stat-card__icon {
+  flex: 0 0 auto;
+  box-shadow: 0 14px 28px rgba(124, 58, 237, 0.16);
+}
+
+.year-summary-card .stat-card__label,
+.year-summary-card .stat-card__detail {
+  margin: 0;
+  color: rgba(23, 32, 51, 0.58);
+}
+
+.year-summary-card .stat-card__progress {
+  margin-top: 10px;
+}
+
+@keyframes card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 599px) {
+  .year-summary-card {
+    align-items: flex-start;
+  }
+
+  .year-summary-card__metrics {
+    grid-template-columns: 1fr;
+  }
+}

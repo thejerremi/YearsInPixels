@@ -1,0 +1,191 @@
+{
+  "app": {
+    "name": "Years in pixels",
+    "language": "Język"
+  },
+  "common": {
+    "cancel": "Anuluj",
+    "save": "Zapisz",
+    "logout": "Wyloguj",
+    "loading": "Ładowanie..."
+  },
+  "auth": {
+    "login": {
+      "title": "Years in pixels",
+      "subtitle": "Zaloguj się, aby zapisać dzisiejszy nastrój.",
+      "eyebrow": "Twój rok w kolorach",
+      "featureOne": "Cały rok małych wspomnień",
+      "featureTwo": "Nastrój zapisany w skali 0-100",
+      "featureThree": "Prywatny dziennik tylko po zalogowaniu",
+      "submit": "Zaloguj",
+      "noAccount": "Nie masz konta?",
+      "registerLink": "Zarejestruj się",
+      "submitAria": "Zaloguj się do aplikacji Years in pixels",
+      "registerAria": "Przejdź do rejestracji"
+    },
+    "register": {
+      "title": "Załóż konto",
+      "subtitle": "Konto jest wymagane, aby prowadzić własny rok w pixelach.",
+      "eyebrow": "Zacznij dziś",
+      "featureOne": "Jedna krótka notatka dziennie",
+      "featureTwo": "Kolorowy przegląd całego roku",
+      "featureThree": "Powroty do losowych wspomnień",
+      "submit": "Utwórz konto",
+      "hasAccount": "Masz już konto?",
+      "loginLink": "Zaloguj się",
+      "submitAria": "Utwórz konto Years in pixels",
+      "loginAria": "Przejdź do logowania"
+    },
+    "fields": {
+      "username": "Nazwa użytkownika",
+      "password": "Hasło",
+      "confirmPassword": "Powtórz hasło"
+    },
+    "validation": {
+      "usernameRequired": "Podaj nazwę użytkownika.",
+      "usernameMin": "Nazwa użytkownika powinna mieć co najmniej 3 znaki.",
+      "usernameMax": "Nazwa użytkownika nie może mieć więcej niż 20 znaków.",
+      "passwordRequired": "Podaj hasło.",
+      "passwordMin": "Hasło powinno mieć co najmniej 6 znaków.",
+      "passwordMatch": "Hasła muszą być takie same."
+    },
+    "errors": {
+      "loginFailed": "Nie udało się zalogować.",
+      "registerFailed": "Nie udało się utworzyć konta.",
+      "sessionExpired": "Sesja wygasła. Zaloguj się ponownie."
+    }
+  },
+  "home": {
+    "eyebrow": "Dashboard nastroju",
+    "yearSubtitle": "Każdy kwadrat to jeden dzień roku. Kliknij dzisiejszy lub wcześniejszy dzień, aby dodać albo edytować wpis.",
+    "previousYear": "Pokaż poprzedni rok",
+    "previousYearShort": "Poprzedni",
+    "nextYear": "Pokaż następny rok",
+    "nextYearShort": "Następny",
+    "gridLabel": "Siatka dni roku",
+    "legendLow": "Gorszy dzień",
+    "legendHigh": "Świetny dzień",
+    "legendEmpty": "Brak wpisu",
+    "noEntry": "brak wpisu",
+    "moodOutOf": "{value} na 100",
+    "stats": {
+      "yearSummary": "Rok w skrócie",
+      "completed": "Zapisane dni",
+      "completion": "{value}% uzupełnionych dni",
+      "average": "Średni nastrój - {year}",
+      "yearProgress": "Upływ roku",
+      "yearProgressDetail": "{day} dzień roku z {total} dni",
+      "filled": "wypełnione",
+      "noData": "Brak danych"
+    },
+    "canvas": {
+      "title": "Mapa roku",
+      "subtitle": "Twój rok jako żywy gradient wspomnień, nastrojów i krótkich notatek.",
+      "hint": "Kliknij pixel"
+    },
+    "tooltip": {
+      "emptySummary": "Brak wpisu. Kliknij, aby dodać."
+    },
+    "week": {
+      "previous": "Pokaż poprzedni tydzień",
+      "next": "Pokaż następny tydzień"
+    },
+    "today": {
+      "title": "Dzisiejszy pixel",
+      "subtitle": "Skala zadowolenia od 0 do 100.",
+      "empty": "Kliknij pulsujący pixel w siatce, aby dodać dzisiejszy wpis.",
+      "openAria": "Otwórz edycję dzisiejszego pixela"
+    },
+    "flashback": {
+      "title": "Losowe wspomnienie",
+      "subtitle": "Kapsuła czasu z nastrojem, opisem i notatką z tamtego dnia.",
+      "empty": "Wspomnienie pojawi się, gdy zapiszesz pierwsze dni.",
+      "rerollAria": "Wylosuj nowe wspomnienie"
+    },
+    "dialog": {
+      "title": "Zapisz wybrany dzień",
+      "subtitle": "Wybierz zadowolenie i opisz dzień.",
+      "selectedDate": "Wybrana data: {date}",
+      "moodLabel": "Zadowolenie",
+      "dayWord": "Krótki opis humoru",
+      "dayWordPlaceholder": "Jak się czujesz?",
+      "moodSuggestionsLabel": "Podpowiedzi dla tego nastroju",
+      "moodSuggestions": {
+        "heaviness": "ciężar",
+        "tiredness": "zmęczenie",
+        "overwhelm": "przytłoczenie",
+        "sadness": "smutek",
+        "tension": "napięcie",
+        "emptiness": "pustka",
+        "helplessness": "bezsilność",
+        "melancholy": "melancholia",
+        "anxiety": "niepokój",
+        "weariness": "znużenie",
+        "chaos": "chaos",
+        "scattered": "rozproszenie",
+        "irritation": "irytacja",
+        "sleepiness": "senność",
+        "reflection": "refleksja",
+        "lowEnergy": "spadek energii",
+        "neutral": "neutralnie",
+        "calm": "spokój",
+        "steady": "stabilnie",
+        "routine": "rutyna",
+        "balance": "równowaga",
+        "quiet": "cisza",
+        "focus": "skupienie",
+        "ordinary": "normalnie",
+        "lightness": "lekkość",
+        "energy": "energia",
+        "gratitude": "wdzięczność",
+        "motivation": "motywacja",
+        "smile": "uśmiech",
+        "hope": "nadzieja",
+        "satisfaction": "satysfakcja",
+        "goodRhythm": "dobry rytm",
+        "joy": "radość",
+        "euphoria": "euforia",
+        "flow": "flow",
+        "fulfillment": "spełnienie",
+        "delight": "zachwyt",
+        "pride": "duma",
+        "enthusiasm": "entuzjazm",
+        "greatDay": "świetny dzień"
+      },
+      "journal": "Opis dnia",
+      "charactersLeft": "Pozostało znaków: {count}",
+      "cancelAria": "Anuluj zapis pixela",
+      "saveAria": "Zapisz wybrany pixel"
+    },
+    "validation": {
+      "dayWordRequired": "Krótko opisz humor.",
+      "dayWordMax": "Maksymalnie 30 znaków.",
+      "journalMax": "Maksymalnie 2000 znaków."
+    },
+    "errors": {
+      "fetchYear": "Nie udało się pobrać pixeli roku.",
+      "saveToday": "Nie udało się zapisać pixela."
+    }
+  },
+  "apiErrors": {
+    "usernameRequired": "Nazwa użytkownika jest wymagana.",
+    "usernameMin": "Nazwa użytkownika musi mieć co najmniej 3 znaki.",
+    "usernameMax": "Nazwa użytkownika nie może przekraczać 20 znaków.",
+    "passwordRequired": "Hasło jest wymagane.",
+    "passwordMin": "Hasło musi mieć co najmniej 6 znaków.",
+    "dateRequired": "Data jest wymagana.",
+    "moodRange": "Wartość nastroju musi być od 0 do 100.",
+    "dayWordMax": "Krótki opis dnia jest za długi, maksymalnie {max} znaków.",
+    "journalMax": "Opis dnia przekracza maksymalną długość {max} znaków.",
+    "futureDate": "Nie możesz zapisać pixela dla przyszłej daty.",
+    "validationFailed": "Walidacja nie powiodła się.",
+    "internalServer": "Wewnętrzny błąd serwera. Spróbuj ponownie później.",
+    "usernameExists": "Nazwa użytkownika już istnieje.",
+    "invalidCredentials": "Nieprawidłowa nazwa użytkownika lub hasło.",
+    "invalidRefreshToken": "Nieprawidłowy refresh token.",
+    "authenticated": "Jesteś zalogowany.",
+    "noMemories": "Nie znaleziono jeszcze żadnych wspomnień.",
+    "pixelSaved": "Pixel został zapisany.",
+    "network": "Nie udało się połączyć z serwerem."
+  }
+}

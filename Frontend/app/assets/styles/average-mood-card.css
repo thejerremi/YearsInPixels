@@ -1,0 +1,55 @@
+.dashboard-card {
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.78);
+  animation: card-enter 520ms ease-out both;
+  backdrop-filter: blur(24px);
+  box-shadow: 0 26px 70px rgba(31, 41, 55, 0.12);
+}
+
+.average-mood-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 104px;
+  padding: 16px 18px;
+  border-radius: 28px;
+}
+
+.average-mood-card__icon {
+  flex: 0 0 auto;
+  box-shadow: 0 14px 28px rgba(124, 58, 237, 0.16);
+}
+
+.average-mood-card__label,
+.average-mood-card__detail {
+  margin: 0;
+  color: rgba(23, 32, 51, 0.58);
+}
+
+.average-mood-card__value {
+  margin: 4px 0;
+  font-size: 1.8rem;
+  font-weight: 850;
+  line-height: 1;
+  background: linear-gradient(135deg, #7657f5, #06b6d4);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 599px) {
+  .average-mood-card {
+    min-height: 118px;
+  }
+}

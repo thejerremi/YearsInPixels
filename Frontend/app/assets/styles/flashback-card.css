@@ -1,0 +1,93 @@
+.dashboard-card {
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.78);
+  animation: card-enter 520ms ease-out both;
+  backdrop-filter: blur(24px);
+  box-shadow: 0 26px 70px rgba(31, 41, 55, 0.12);
+}
+
+.flashback-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--card-radius);
+}
+
+.flashback-card__title {
+  margin: 0 0 8px;
+  color: #172033;
+  font-size: 1.1rem;
+  font-weight: 750;
+}
+
+.flashback-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.flashback-card__heading {
+  min-width: 0;
+}
+
+.flashback-card__heading :deep(.v-card-subtitle) {
+  overflow: visible;
+  text-overflow: initial;
+  white-space: normal;
+}
+
+.flashback-card__reroll {
+  flex: 0 0 auto;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 999px !important;
+  font-weight: 850;
+}
+
+.empty-state {
+  display: grid;
+  gap: 10px;
+  place-items: center;
+  min-height: 150px;
+  color: rgba(23, 32, 51, 0.58);
+  font-weight: 700;
+  text-align: center;
+}
+
+@keyframes card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1180px) {
+  .flashback-card :deep(.v-card-item) {
+    padding-bottom: 6px;
+  }
+
+  .flashback-card :deep(.v-card-text) {
+    padding-top: 4px;
+  }
+
+  .empty-state {
+    min-height: 112px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 599px) {
+  .flashback-card__header {
+    align-items: flex-start;
+  }
+
+  .flashback-card__reroll {
+    margin-top: 2px;
+  }
+}
