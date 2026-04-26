@@ -3,6 +3,12 @@
 ## Description
 Year in Pixels is a web application designed to monitor mood and mental well-being throughout the year. It allows users to record their daily emotional state, a brief summary of the day, and a detailed journal entry. The primary goal of the project is to visualize an emotional map of the year, helping users identify mood patterns and engage in self-reflection.
 
+## App preview
+
+https://github.com/user-attachments/assets/58fee21c-4d25-4c56-8341-940c4251a930
+
+
+
 ### Key Features
 
 * Secure sign-in so your mood journal stays private to your account.
